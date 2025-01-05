@@ -142,3 +142,58 @@ function getBooks() {
 function getBook(id) {
   return data.find((d) => d.id === id);
 }
+
+//Destructuring
+const book = getBook(2);
+// const title = book.title;
+// const author = book.author;
+
+//Use curly brackets for the object destructuring
+const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
+  book;
+
+//rest operator ... takes all the other array values that haven't been destructured (it is an array even after rest). You can put rest operator value at the end.
+const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
+
+console.log(title, author, genres);
+console.log(primaryGenre, secondaryGenre, otherGenres);
+
+//spread operator - take all the values from the array and separates them as individual values aka spreads them.
+const newGenres = [...genres, "epic fantasy"];
+
+//spread on objects
+const updatedBook = {
+  ...book,
+  moviePublicationDate: "2001-12-19",
+  pages: 1201,
+};
+
+//arrow function
+const getYear = (str) => str.split("-")[0];
+
+//template literals
+const summary = `${title}, a ${pages}-page long book, was written by ${author} and published in ${getYear(
+  publicationDate
+)}`;
+
+//ternary operators -- condition ? true : false
+const pagesRange = pages > 1000 ? "over a thousand" : "less than 1000";
+pagesRange;
+
+//short circuiting & logical operators -- for &&, if first val is false, it returns and doesnt check the second value.
+//falsy value - 0, '', null, undefined
+console.log(true && "some string");
+console.log(false && "some string");
+console.log("first string" && "second string");
+
+console.log(book.translations.spanish);
+const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";
+spanishTranslation;
+
+console.log(book.reviews.librarything.reviewsCount);
+const countWrong = book.reviews.librarything.reviewsCount || "no data";
+countWrong;
+
+//Nullish coalescing operator (??) -- returns right-hand side operand when its left-hand side operand is null or undefined (NOT WHEN 0 or EMPTY STRING)
+const count = book.reviews.librarything.reviewsCount ?? "no data";
+count;
