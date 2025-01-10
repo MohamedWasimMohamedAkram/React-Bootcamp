@@ -144,7 +144,7 @@ function getBook(id) {
 }
 
 //Destructuring
-const book = getBook(2);
+const book = getBook(3);
 // const title = book.title;
 // const author = book.author;
 
@@ -188,12 +188,19 @@ console.log("first string" && "second string");
 
 console.log(book.translations.spanish);
 const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";
-spanishTranslation;
 
 console.log(book.reviews.librarything.reviewsCount);
 const countWrong = book.reviews.librarything.reviewsCount || "no data";
-countWrong;
 
 //Nullish coalescing operator (??) -- returns right-hand side operand when its left-hand side operand is null or undefined (NOT WHEN 0 or EMPTY STRING)
 const count = book.reviews.librarything.reviewsCount ?? "no data";
-count;
+
+function getTotalReviewCount(book) {
+  const goodRead = book.reviews.goodreads.reviewsCount;
+  //optional chaining - something.anything?.value -- it only checks for the value if something.anything exists (not null or undefined)
+  //book?.pages?.contents - checks for book first, then pages,then contents, if book or pages isn't valid, then contents won't be checked too
+  const libraryAnything = book.reviews.librarything?.reviewsCount ?? 0;
+  return goodRead + libraryAnything;
+}
+
+console.log(getTotalReviewCount(book));
