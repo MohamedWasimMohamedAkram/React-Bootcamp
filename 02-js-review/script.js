@@ -144,6 +144,7 @@ function getBook(id) {
 }
 
 //Destructuring
+/*
 const book = getBook(3);
 // const title = book.title;
 // const author = book.author;
@@ -204,3 +205,88 @@ function getTotalReviewCount(book) {
 }
 
 console.log(getTotalReviewCount(book));
+*/
+
+/*
+const books = getBooks();
+//map - returns a new array with some operation applied to each element in the array
+const x = [1, 2, 3, 4, 5].map((el) => el * 2);
+
+const titles = books.map((book) => book.title);
+titles;
+
+const essentialData = books.map((book) => ({
+  title: book.title,
+  author: book.author,
+}));
+essentialData;
+
+//filter - filter elements of array based on condition
+const longBooksWithMovie = books
+  .filter((book) => book.pages > 500)
+  .filter((book) => book.hasMovieAdaptation);
+longBooksWithMovie;
+
+const adventureBooks = books
+  .filter((book) => book.genres.includes("adventure"))
+  .map((book) => book.title);
+adventureBooks;
+
+//reduce - method to reduce the array down to one value. accumulator starts at the starter value and accumulator keeps addng on with the book pages. so eg. 0 + book1.pages and then acc will be equal to book1.pages so next is book1.pages + book2.pages
+const pagesAllBooks = books.reduce((acc, book) => acc + book.pages, 0);
+pagesAllBooks;
+
+//sort - this is not functional like previous methods so it doesnt not return a new array but mutates the original array.
+//You don't want to mutate genereally so you can use arr.slice() to create a copy of the array and then sort
+const numArray = [3, 7, 1, 9, 6];
+//ascending is (a - b) and (b - a) is descending
+const sorted = numArray.slice().sort((a, b) => a - b);
+sorted;
+
+const sortedByPages = books
+  .slice()
+  .sort((a, b) => b.pages - a.pages)
+  .map((book) => ({
+    title: book.title,
+    pages: book.pages,
+  }));
+sortedByPages;
+
+//immutable arrays - how to add, delete or update elements of array without modifying original array
+
+// 1) Add book object to array
+const newBook = {
+  id: 6,
+  title: "Harry Potter and the Chamber of Secrets",
+  author: "J.K Rowling",
+};
+
+const booksAfterAdd = [...books, newBook];
+
+// 2) Delete book object from array
+const booksAfterDelete = booksAfterAdd.filter((book) => book.id !== 3);
+
+//3 Update book object in the array
+const booksAfterUpdate = booksAfterDelete.map((book) =>
+  book.id === 1 ? { ...book, pages: 1210 } : book
+);
+
+booksAfterUpdate;
+*/
+
+//Async JS Promises - if you dont use await, it will run code before promise is fulfilled. fetch(api).then(a => a.json()).then(data => console.log(data)). so basically fetch().then(convert to json).then(use the data accordingly)
+// fetch("https://jsonplaceholder.typicode.com/todos/1").then((res) =>
+//   res.json().then((data) => console.log(data))
+// );
+
+// console.log("Should be printed after API call but won't since await not used");
+
+//Async and Await - don't need to use then handlers
+async function getTodos() {
+  //Get response from API
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos/5");
+  //Convert response to JSON
+  const data = await res.json();
+  console.log(data);
+}
+getTodos();
