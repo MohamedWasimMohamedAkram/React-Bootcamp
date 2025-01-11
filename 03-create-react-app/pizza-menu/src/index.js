@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
 
 const pizzaData = [
   {
@@ -48,24 +49,75 @@ const pizzaData = [
 
 function App() {
   return (
-    <div>
-      <h1>Hello React!</h1>
-      <Pizza />
-      <Pizza />
-      <Pizza />
+    //className in JSX and not class
+    <div className="container">
+      <Header />
+      <Menu />
+      <Footer />
     </div>
   );
 }
 
 //Create new Component
-function Pizza() {
+function Menu() {
   return (
-    <div>
-      <img src="pizzas/focaccia.jpg" alt="focaccia" />
-      <h2>Focaccia</h2>
-      <p>Bread with italian olive oil and rosemary</p>
+    <main className="menu">
+      <h2>Our menu</h2>
+      <Pizza
+        name="Focaccia"
+        ingredient="Bread with italian olive oil and rosemary"
+        photoName="pizzas/focaccia.jpg"
+        price={10}
+      />
+      <Pizza
+        name="Pizza Funghi"
+        ingredient="Tomato, mozarella, mushrooms, and onion"
+        photoName="pizzas/funghi.jpg"
+        //Anything other than string must be enclosed in js braces
+        price={12}
+      />
+    </main>
+  );
+}
+//Props are read-only and if you need to mutate props, you actually need state.
+function Pizza(props) {
+  return (
+    <div className="pizza">
+      <img src={props.photoName} alt={props.name} />
+      <div>
+        <h3>{props.name}</h3>
+        <p>{props.ingredient}</p>
+        <span>{props.price + 3}</span>
+      </div>
     </div>
   );
+}
+
+function Header() {
+  // const style = { color: "red", fontSize: "50px" };
+  const style = {};
+  return (
+    <header className="header">
+      <h1 style={style}>Fast React Pizza Co.</h1>
+    </header>
+  );
+}
+
+function Footer() {
+  const hour = new Date().getHours();
+  const openHour = 10;
+  const closeHour = 22;
+  const isOpen = hour >= openHour && hour <= closeHour;
+
+  // if (hour >= openHour && hour <= closeHour) alert("We're currently open");
+  // else alert("Sorry, we're closed");
+  return (
+    <footer className="footer">
+      {new Date().toLocaleTimeString()}. We're currently open
+    </footer>
+  );
+  //Without using JSX
+  // return React.createElement("footer", null, "We're currently open");
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
