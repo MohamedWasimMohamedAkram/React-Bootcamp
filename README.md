@@ -1,97 +1,108 @@
 # React Bootcamp: My Learning Journey 🚀
 
-This repository documents my progress through a comprehensive React Bootcamp. Below is a checklist of the concepts and tools I’ll be learning throughout the program. I’ll update this list as I complete each topic to track my progress.  
+This repository documents my progress through a comprehensive React Bootcamp. Below is a checklist of the concepts and tools I’ll be learning throughout the program. I’ll update this list as I complete each topic to track my progress.
 
 ---
 
-## 🗂 Topics Covered  
+## 🗂 Topics Covered
 
-### ✅ Getting Started  
-- [X] Watch Before You Start!  
-- [X] Why Do Front-End Frameworks Exist?  
-- [X] What is React?  
-- [X] Setting Up a New React Project: The Two Options  
+### ✅ Getting Started
 
-### 🛠 Core React Concepts  
-- [ ] Components as Building Blocks  
-- [ ] What is JSX?  
-- [ ] Separation of Concerns  
-- [ ] Props, Immutability, and One-Way Data Flow  
-- [ ] The Rules of JSX  
-- [ ] Section Summary  
+- [x] Watch Before You Start!
+- [x] Why Do Front-End Frameworks Exist?
+- [x] What is React?
+- [x] Setting Up a New React Project: The Two Options
 
-### 🎛 State Management  
-- [ ] What is State in React?  
-- [ ] The Mechanics of State  
-- [ ] More Thoughts About State + State Guidelines  
-- [ ] State vs. Props  
-- [ ] Fundamentals of State Management  
-- [ ] Derived State  
+### 🛠 Core React Concepts
 
-### 🔄 Component Design and Structure  
-- [ ] The children Prop: Making a Reusable Button  
-- [ ] How to Split a UI Into Components  
-- [ ] Component Categories  
-- [ ] Component Composition  
-- [ ] Props as a Component API  
+- [x] Components as Building Blocks
+- [x] What is JSX?
+- [x] Separation of Concerns
+- [x] Props, Immutability, and One-Way Data Flow
+- [x] The Rules of JSX
+- [ ] Section Summary
 
-### ⚙️ React Rendering Mechanics  
-- [ ] Components, Instances, and Elements  
-- [ ] How Rendering Works: Overview  
-- [ ] How Rendering Works: The Render Phase  
-- [ ] How Rendering Works: The Commit Phase  
-- [ ] How Diffing Works  
-- [ ] The Key Prop  
+### 🎛 State Management
 
-### 📚 Lifecycle and Events  
-- [ ] Rules for Render Logic: Pure Components  
-- [ ] State Update Batching  
-- [ ] How Events Work in React  
-- [ ] Libraries vs. Frameworks & The React Ecosystem  
-- [ ] The Component Lifecycle  
+- [ ] What is State in React?
+- [ ] The Mechanics of State
+- [ ] More Thoughts About State + State Guidelines
+- [ ] State vs. Props
+- [ ] Fundamentals of State Management
+- [ ] Derived State
 
-### 🎣 Hooks and Advanced Concepts  
-- [ ] A First Look at Effects  
-- [ ] The useEffect Dependency Array  
-- [ ] The useEffect Cleanup Function  
-- [ ] React Hooks and Their Rules  
-- [ ] useState Summary  
-- [ ] Managing State With useReducer  
+### 🔄 Component Design and Structure
 
-### 🚀 Advanced React Topics  
-- [ ] useState vs. useReducer  
-- [ ] Routing and Single-Page Applications (SPAs)  
-- [ ] Styling Options For React Applications  
-- [ ] What is the Context API?  
-- [ ] Thinking in React: Advanced State Management  
-- [ ] Performance Optimization and Wasted Renders  
-- [ ] Understanding memo  
-- [ ] Understanding useMemo and useCallback  
-- [ ] Optimizing Bundle Size With Code Splitting  
-- [ ] Don't Optimize Prematurely!  
-- [ ] useEffect Rules and Best Practices  
+- [ ] The children Prop: Making a Reusable Button
+- [ ] How to Split a UI Into Components
+- [ ] Component Categories
+- [ ] Component Composition
+- [ ] Props as a Component API
 
-### 🛠 State Management and Tools  
-- [ ] Introduction to Redux  
-- [ ] Redux Middleware and Thunks  
-- [ ] What is Redux Toolkit (RTK)?  
-- [ ] Redux vs. Context API  
-- [ ] Application Planning (“Fast React Pizza Co.”)  
-- [ ] Application Planning (“The Wild Oasis”)  
+### ⚙️ React Rendering Mechanics
 
-### 🏗 Modern React Ecosystem  
-- [ ] What is Tailwind CSS?  
-- [ ] What is Supabase?  
-- [ ] Modeling Application State  
-- [ ] What is React Query?  
-- [ ] An Overview of Reusability in React  
+- [ ] Components, Instances, and Elements
+- [ ] How Rendering Works: Overview
+- [ ] How Rendering Works: The Render Phase
+- [ ] How Rendering Works: The Commit Phase
+- [ ] How Diffing Works
+- [ ] The Key Prop
+
+### 📚 Lifecycle and Events
+
+- [ ] Rules for Render Logic: Pure Components
+- [ ] State Update Batching
+- [ ] How Events Work in React
+- [ ] Libraries vs. Frameworks & The React Ecosystem
+- [ ] The Component Lifecycle
+
+### 🎣 Hooks and Advanced Concepts
+
+- [ ] A First Look at Effects
+- [ ] The useEffect Dependency Array
+- [ ] The useEffect Cleanup Function
+- [ ] React Hooks and Their Rules
+- [ ] useState Summary
+- [ ] Managing State With useReducer
+
+### 🚀 Advanced React Topics
+
+- [ ] useState vs. useReducer
+- [ ] Routing and Single-Page Applications (SPAs)
+- [ ] Styling Options For React Applications
+- [ ] What is the Context API?
+- [ ] Thinking in React: Advanced State Management
+- [ ] Performance Optimization and Wasted Renders
+- [ ] Understanding memo
+- [ ] Understanding useMemo and useCallback
+- [ ] Optimizing Bundle Size With Code Splitting
+- [ ] Don't Optimize Prematurely!
+- [ ] useEffect Rules and Best Practices
+
+### 🛠 State Management and Tools
+
+- [ ] Introduction to Redux
+- [ ] Redux Middleware and Thunks
+- [ ] What is Redux Toolkit (RTK)?
+- [ ] Redux vs. Context API
+- [ ] Application Planning (“Fast React Pizza Co.”)
+- [ ] Application Planning (“The Wild Oasis”)
+
+### 🏗 Modern React Ecosystem
+
+- [ ] What is Tailwind CSS?
+- [ ] What is Supabase?
+- [ ] Modeling Application State
+- [ ] What is React Query?
+- [ ] An Overview of Reusability in React
 
 ---
 
-## 🎯 My Goal  
-- [ ] Master React for building dynamic, reusable, and efficient web applications.  
-- [ ] Learn to optimize performance and manage state effectively.  
-- [ ] Explore modern tools like Redux, Context API, and Tailwind CSS to enhance my skillset.  
+## 🎯 My Goal
+
+- [ ] Master React for building dynamic, reusable, and efficient web applications.
+- [ ] Learn to optimize performance and manage state effectively.
+- [ ] Explore modern tools like Redux, Context API, and Tailwind CSS to enhance my skillset.
 
 ---
 
