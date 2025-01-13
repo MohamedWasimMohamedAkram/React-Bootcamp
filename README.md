@@ -20,7 +20,7 @@ This repository documents my progress through a comprehensive React Bootcamp. Be
 - [x] Separation of Concerns
 - [x] Props, Immutability, and One-Way Data Flow
 - [x] The Rules of JSX
-- [ ] Section Summary
+- [x] Section Summary
 
 ### 🎛 State Management
 
