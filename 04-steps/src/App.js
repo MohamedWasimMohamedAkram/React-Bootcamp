@@ -1,3 +1,4 @@
+import { useState } from "react";
 const messages = [
   "Learn React ⚛️",
   "Apply for jobs 💼",
@@ -5,26 +6,64 @@ const messages = [
 ];
 
 export default function App() {
-  const step = 1;
   return (
-    <div className="steps">
-      <div className="numbers">
-        <div className={`${step >= 1 ? "active" : ""}`}>1</div>
-        <div className={`${step >= 2 ? "active" : ""}`}>2</div>
-        <div className={`${step >= 3 ? "active" : ""}`}>3</div>
-      </div>
+    <div>
+      <Steps />
+      <Steps />
+    </div>
+  );
+}
 
-      <p className="message">
-        Step {step}: {messages[step - 1]}
-      </p>
-      <div className="buttons">
-        <button style={{ backgroundColor: "#7950f2", color: "#fff" }}>
-          Previous
-        </button>
-        <button style={{ backgroundColor: "#7950f2", color: "#fff" }}>
-          Next
-        </button>
-      </div>
+function Steps() {
+  //useState returns an array. First value is the initial value and second one is a function to update the first variable.
+  //useState is a react hook. useXxxx are hooks.
+  //Can only call hooks at the top level of a function (not in loop)
+  //DO not change state manually (without using setStep)
+  const [step, setStep] = useState(1);
+  const [isOpen, setIsOpen] = useState(true);
+  //State is like the memory of the app
+  function handlePrevious() {
+    //Better to use callback function to update current value
+    if (step > 1) setStep((s) => s - 1);
+  }
+  function handleNext() {
+    //If you're not updating current value, you can use the one below.
+    //Callback better for this but for demonstration, I won't change this to callback function
+    if (step < 3) setStep(step + 1);
+  }
+  return (
+    <div>
+      {/* To toggle from true to false, use ! operator */}
+      <button className="close" onClick={() => setIsOpen((is) => !is)}>
+        &times;
+      </button>
+      {isOpen && (
+        <div className="steps">
+          <div className="numbers">
+            <div className={step >= 1 ? "active" : ""}>1</div>
+            <div className={step >= 2 ? "active" : ""}>2</div>
+            <div className={step >= 3 ? "active" : ""}>3</div>
+          </div>
+
+          <p className="message">
+            Step {step}: {messages[step - 1]}
+          </p>
+          <div className="buttons">
+            <button
+              style={{ backgroundColor: "#7950f2", color: "#fff" }}
+              onClick={handlePrevious}
+            >
+              Previous
+            </button>
+            <button
+              style={{ backgroundColor: "#7950f2", color: "#fff" }}
+              onClick={handleNext}
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -24,9 +24,9 @@ This repository documents my progress through a comprehensive React Bootcamp. Be
 
 ### 🎛 State Management
 
-- [ ] What is State in React?
-- [ ] The Mechanics of State
-- [ ] More Thoughts About State + State Guidelines
+- [x] What is State in React?
+- [x] The Mechanics of State
+- [x] More Thoughts About State + State Guidelines
 - [ ] State vs. Props
 - [ ] Fundamentals of State Management
 - [ ] Derived State
